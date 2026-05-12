@@ -105,8 +105,7 @@ Recommended:
 # Step 1 — Clone Repository
 
 ```bash id="a9zbvi"
-git clone <repository-url>
-cd insurance-claim-agent
+git clone https://github.com/manandev18/Autonomous-Insurance-Claims-Processing-Agent
 ```
 
 ---
