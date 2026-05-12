@@ -113,6 +113,7 @@ git clone https://github.com/manandev18/Autonomous-Insurance-Claims-Processing-A
 # Step 2 — Start Docker Containers
 
 ```bash id="e8o2uy"
+cd Autonomous-Insurance-Claims-Processing-Agent
 docker compose up --build
 ```
 
