@@ -1,0 +1,42 @@
+version: '3.9'
+
+services:
+
+  ollama:
+
+    image: ollama/ollama
+
+    container_name: ollama
+
+    ports:
+      - "11434:11434"
+
+    volumes:
+      - ollama_data:/root/.ollama
+
+    restart: always
+
+
+  insurance-agent:
+
+    build: .
+
+    container_name: insurance-agent
+
+    ports:
+      - "8000:8000"
+
+    depends_on:
+      - ollama
+
+    environment:
+      - OLLAMA_HOST=http://ollama:11434
+
+    volumes:
+      - .:/app
+
+    restart: always
+
+
+volumes:
+  ollama_data:
